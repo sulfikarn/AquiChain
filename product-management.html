@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>AquiChain | industry-management</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="./assests/style.css">
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+</head>
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <div class="section">
+                <div class="sidebar_logo">
+                    <img src="./assests/images/Aquichain logo.png">
+                </div>
+                <div class="sidebar_menu">
+                    <div class="item">
+                        <a href="#">
+                            <div class="sidebar_icon"><img src="./assests/images/dashboard-line.png"></div>
+                            <div class="item_text">Dashboard</div>
+                        </a>
+                    </div>
+        
+                    <div class="item">
+                        <a href="industry-management.html">
+                            <div class="sidebar_icon"><img src="./assests/images/building.png"></div>
+                            <div class="item_text">Industry Management</div>
+                        </a>
+                    </div>
+        
+                    <div class="item">
+                        <a href="product-management.html" class="active">
+                            <div class="sidebar_icon"><img src="./assests/images/stack-line.png"></div>
+                            <div class="item_text">Product Management</div>
+                        </a>
+                    </div>
+        
+                    <div class="item">
+                        <a href="#">
+                            <div class="sidebar_icon"><img src="./assests/images/alert-line.png"></div>
+                            <div class="item_text">Alert Viewer</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="main_content">
+            <div class="row">
+                <header>
+                    <h2 class="page_header">Sub-Industry Management</h2>
+                    <div class="header_right">
+                        <form method="POST">
+                            <div class="form-group">
+                                <input type="text" name="serch">
+                            </div>
+                        </form>
+                        <div class="filter">
+                            <img src="assests/images/filter.png">
+                        </div>
+                        <div class="profile">
+                            <img src ="assests/images/Raghu.jpg"><span><img src="assests/images/drop down line.png"></span>
+                        </div>
+                        
+                    </div>
+                </header>
+            </div>
+
+            <section class="table_content">
+                <div class="row">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sub-Industry Name</th>
+                                <th>Aquifier Number</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="toggler" data-prod-cat="1">Beverages</td>
+                                <td>A1</td>
+                                <td><img src="assests/images/settings.png" onclick="myFunction()">
+                                    <!-- <div class="action">
+                                        <span class="action_link"><a href="#home">Home</a> </span>                                     
+                                        <span class="action_link"><a href="#about">About</a></span>
+                                        <span  class="action_link"><a href="#contact">Contact</a></span>
+                                    </div> -->
+                                </td>
+                            </tr>
+                            
+                            
+                            <tr class="cat1" style="display:none">
+                                    <td>Sub-Industry Name : Beverages 
+                                        <span>Water Consumption(Per Day) : 1000L</span>
+                                    </td>
+                                    <td>Aquifier Number : A1
+                                        <span>Production (Per Day) : 500 Units</span>
+                                    </td>
+                                    <td>Threshold(Litres) : 1000L<span></span></td>
+                                    
+                            </tr>
+                            
+
+                            <tr>
+                                <td class="toggler" data-prod-cat="2">Bottling</td>
+                                <td>A1</td>
+                                <td><img src="assests/images/settings.png"></td>
+                            </tr>
+
+                            <tr class="cat2" style="display:none">
+                                <td>Sub-Industry Name : Bottling 
+                                    <span>Water Consumption(Per Day) : 1000L</span>
+                                </td>
+                                <td>Aquifier Number : A1
+                                    <span>Production (Per Day) : 500 Units</span>
+                                </td>
+                                <td>Threshold(Litres) : 1000L<span></span></td>
+                                
+                            </tr>
+
+                            <tr class="toggler" data-prod-cat="3">
+                                <td>Capping</td>
+                                <td>A1</td>
+                                <td><img src="assests/images/settings.png"></td>
+                            </tr>
+
+                            <tr class="cat3" style="display:none">
+                                <td>Sub-Industry Name : Capping 
+                                    <span>Water Consumption(Per Day) : 1000L</span>
+                                </td>
+                                <td>Aquifier Number : A1
+                                    <span>Production (Per Day) : 500 Units</span>
+                                </td>
+                                <td>Threshold(Litres) : 1000L<span></span></td>
+                                
+                            </tr>
+                        </tbody>
+                                
+                    </table>
+                </div>
+            </section>
+
+        </section>
+    </div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+<script>
+    $(document).ready(function(){
+
+        // $('.item a').click(function(){
+        //     $(this).addClass('active').siblings().removeClass('active')
+        // })
+
+        $(".toggler").click(function(e){
+            e.preventDefault();
+            $('.cat'+$(this).attr('data-prod-cat')).toggle();
+        });
+    });
+</script> 
+</body>
+</html>
